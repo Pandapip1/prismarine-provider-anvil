@@ -196,6 +196,7 @@ module.exports = (mcVersion, worldVersion, noSpan) => {
     }
 
     function writePalette (palette) {
+      if (palette == null) palette = []
       const nbtPalette = []
       for (const state of palette) {
         const block = mcData.blocksByStateId[state]
